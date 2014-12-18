@@ -41,6 +41,17 @@ class BikesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@bike = Bike.find(params[:id])
+		@bike.destroy
+		redirect_to bikes_path
+	end
+
+	def plus(x,y)
+		x+y
+	end
+
+
 	private
 		def bike_params
 		 	params.require(:bike).permit(:name, :type, :speed)
