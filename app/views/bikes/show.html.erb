@@ -1,0 +1,11 @@
+<h1> <%= @bike.name %> that you stole!</h1>
+
+<p><img src="http://media.tumblr.com/tumblr_m9fqcwuzl11r1p25e.jpg"></p>
+
+<p>This <%= @bike.name %> is a <%= @bike.type %>, with <%= @bike.speed %>, recently stolen and available today.</p>
+
+<%=  link_to "Edit this bike!", edit_bike_path %>
+
+<%= link_to "Delete this bike!", :bike, method: :delete, data: { confirm: "Are you sure you want to delete this bike?" } %>
+
+<%= link_to "Back to the list!", bikes_path %>

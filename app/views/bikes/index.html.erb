@@ -1,0 +1,25 @@
+
+<h1>Today's Stolen Bikes!</h1>
+<h2><img src="http://rideons.files.wordpress.com/2013/04/img_3399-final.jpg"></h2>
+
+<ul>
+
+	<% @bikes.each do |b| %>
+
+		<li>
+			<strong><%= b.name %></strong> -- <%= b.type %> <%= b.speed %> <%= link_to "More info", bike_path(b) %>
+		</li>
+		
+	<% end %>
+
+</ul>
+
+<ul class="pure-paginator">
+    <li><a class="pure-button prev" href="#">&#171;</a></li>
+    <li><a class="pure-button" href="#">1</a></li>
+    <li><a class="pure-button pure-button-active" href="#">2</a></li>
+    <li><a class="pure-button" href="#">3</a></li>
+    <li><a class="pure-button" href="#">4</a></li>
+    <li><a class="pure-button" href="#">5</a></li>
+    <li><a class="pure-button next" href="#">&#187;</a></li>
+</ul>
